@@ -1,0 +1,64 @@
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700);
+
+footer{display:block}
+
+#kopfzeile {
+	height: 30px;
+	padding: 10px;
+	font-family: arial, "lucida console", sans-serif;
+	color: #657b83;
+	background-color: #eee8d5;
+	border-bottom:2px solid white;
+	text-align: center;
+}
+
+html{
+	font-family:sans-serif;
+	-webkit-text-size-adjust:100%;
+	-ms-text-size-adjust:100%;
+	margin: 1em;
+	}
+
+body{
+	background-color: #gis58g;
+	margin: 0 auto;
+	max-width:38cm;
+	border: 1px solid #657b83;
+	padding: 1em;
+}
+
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+#navi {
+	/*display:inline; /*ersatz für */
+	list-style:none;
+	float:left;
+	background-color:thistle;
+	width:  20%;
+    
+ }
+ 
+h1 {
+	margin: 0 auto;
+	font-family: arial, "lucida console", sans-serif;
+	background-color: #eee8d5;
+	color: #657b83;
+	border: grey 5px solid;
+	text-align: center;
+	}
+	
+.center{
+	text-align:center;
+
+}
+
+#button{
+	border: grey 3px solid;
+	font-size:13pt;
+}
