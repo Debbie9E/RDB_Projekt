@@ -32,7 +32,7 @@
 		foreach ($array as $element) {
 			$return .= "\t\t<tr>\n";
 			foreach ($element as $key => $val) {
-				$return .= "\t\t\t<td headers=\"$prefix$key\" style=\"padding: .25em;\">$val</td>\n";
+				$return .= "\t\t\t<td headers=\"$prefix$key\" style=\"padding: auto;\">$val</td>\n";
 			}
 			
 			$return .= "\t\t</tr>\n";

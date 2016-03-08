@@ -2,19 +2,23 @@
 	require_once 'include/init.php.inc';
 	require_once 'include/header.html.inc';
 	
-	$query = $pdo->prepare("UPDATE `player` SET `yeast` = `yeast` + 1, `money` = `money` - 15 WHERE `ID` = 2");
-	$bought = $query->execute();
+	SESSION_START();
+	$player_id = $_SESSION["player_id2"];
+	//echo $player_id;
+
+	$query = $pdo->prepare("UPDATE `player` SET `yeast` = `yeast` + 1, `money` = `money` - 15 WHERE `ID` = ?");
+	$bought = $query->execute(array($player_id ));
 	
 		
-	$stmt = $pdo->prepare("SELECT `money` FROM `player` WHERE `ID` = 2");
-	$stmt->execute();
+	$stmt = $pdo->prepare("SELECT `money` FROM `player` WHERE `ID` = ?");
+	$stmt->execute(array($player_id ));
 	$money = $stmt->fetchColumn();
 	
 	
 	$message2 = $money;
 	
-	$stmt2 = $pdo->prepare("SELECT `yeast` FROM `player` WHERE `ID` = 2");
-	$stmt2->execute();
+	$stmt2 = $pdo->prepare("SELECT `yeast` FROM `player` WHERE `ID` = ?");
+	$stmt2->execute(array($player_id ));
 	$yeast = $stmt2->fetchColumn();
 	
 	$message3 = $yeast;

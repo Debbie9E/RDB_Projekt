@@ -1,0 +1,6 @@
+#sensible Data
+include/config.php.inc
+
+#personal explude
+sftp-config.json
+

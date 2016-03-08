@@ -2,7 +2,7 @@
 	require_once 'include/init.php.inc';
 	require_once 'include/header.html.inc';
 ?>
-	<h1>Erstellen Sie einen Character</h1>
+	<h1>Erstellen Sie einen Charakter</h1>
 	
 	<div class= "center" >
 			

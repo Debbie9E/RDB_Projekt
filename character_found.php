@@ -21,7 +21,7 @@
 		
 		
 		<h4>Geben Sie die ID Ihres Characters an: </h4>
-		<input form="form-beginn-page" type="text" name="id" maxlength="64" placeholder="id eingeben" required><br></br><br></br>
+		<input form="form-beginn-page" type="text" name="player_id" maxlength="64" placeholder="id eingeben" required><br></br><br></br>
 	
 		<input id="button" form="form-beginn-page" type="submit" value="Charakter laden" ><br>
 	</div>

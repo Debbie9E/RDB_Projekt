@@ -2,9 +2,9 @@
 	$DEBUG = True;
 
 	
-	$username = 'root';
-	$password = '';
-	$database = 'db_rdb';
+	$username = 'abq269';
+	$password = 'Kirschmuffin';
+	$database = $username;
 	
 	
 	
