@@ -6,6 +6,11 @@
 	$player_id = $_SESSION["player_id2"];
 	//echo $player_id;
 	
+	$playerQuery = $pdo->prepare("SELECT `name`, `money` FROM `player` WHERE `ID` = ?");
+	$playerQuery->execute(array($player_id));
+	$playerInfo = $playerQuery->fetchAll();
+	
+	
 	$query = $pdo->prepare("UPDATE `player` SET `water` = `water` + 1, `money` = `money` - 3 WHERE `ID` = ?");
 	$bought = $query->execute(array($player_id ));
 	
@@ -30,6 +35,7 @@
 	}
 
 ?>
+	<?=html_table_from_array($playerInfo)?>
 		<form id="form-buy" name="buy" method="POST" target="_self" action="buy.php"></form>
 		<form id="form-get-money" name="money" method="POST" target="_self" action="get_money.php"></form>
 		
@@ -37,8 +43,8 @@
 		<br></br>
 		<?=$message?>
 		<br></br>
-		<input form="form-buy" type="submit" value="Mehr kaufen">
-		<input form="form-get-money" type="submit" value="Mehr Geld verdienen">
+		<input id = "button" form="form-buy" type="submit" value="Mehr kaufen">
+		<input id = "button" form="form-get-money" type="submit" value="Mehr Geld verdienen">
 		<br></br>
 		Du hast jetzt:<br> 
 		<?=$message3?> Wasser

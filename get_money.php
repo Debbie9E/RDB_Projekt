@@ -5,8 +5,11 @@
 	SESSION_START();
     $player_id = $_SESSION["player_id"]; 
 	//echo $player_id;
-	
 	$_SESSION["player_id2"] = $player_id;
+	
+	$playerQuery = $pdo->prepare("SELECT `name`, `money` FROM `player` WHERE `ID` = ?");
+	$playerQuery->execute(array($player_id));
+	$playerInfo = $playerQuery->fetchAll();
 	
 	
 	$stmt = $pdo->prepare("SELECT money FROM player WHERE ID = ?");
@@ -24,7 +27,7 @@
 	
 	
 ?>
-
+	<?=html_table_from_array($playerInfo)?>
 	<div class="center">
 		<form id="form-get-money" name="get-money" method="POST" target="_self" action="get_money.php"></form>
 		<form id="form-buy" name="buy" method="POST" target="_self" action="buy.php"></form>		
@@ -33,9 +36,9 @@
 			
 			<?=$message?><br>
 			<br></br>
-			<input form="form-get-money" type="submit" value="€ klick mich €">
+			<input id = "button" form="form-get-money" type="submit" value="€ klick mich €">
 			<br></br>		<br></br>
-			<input form="form-buy" type="submit" id="los" value="Ich glaub` ich hab genug verdient, lass uns einkaufen.">
+			<input id = "button" form="form-buy" type="submit" id="los" value="Ich glaub` ich hab genug verdient, lass uns einkaufen.">
 			
 		
 	</div>

@@ -37,8 +37,8 @@
 		<br></br>
 		<?=$message?>
 		<br></br>
-		<input form="form-buy" type="submit" value="Mehr kaufen">
-		<input form="form-get-money" type="submit" value="Mehr Geld verdienen">
+		<input id = "button" form="form-buy" type="submit" value="Mehr kaufen">
+		<input id = "button" form="form-get-money" type="submit" value="Mehr Geld verdienen">
 		<br></br>
 		Du hast jetzt:<br> 
 		<?=$message3?> Hefe

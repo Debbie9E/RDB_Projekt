@@ -62,3 +62,14 @@ h1 {
 	border: grey 3px solid;
 	font-size:13pt;
 }
+
+#schrift{
+	font-weight:bold;
+	text-decoration:underline;
+	font-size: 13pt;
+}
+
+#text{	 
+	font-weight:bold;
+	font-size: 14pt;
+}
